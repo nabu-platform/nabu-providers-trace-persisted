@@ -1,0 +1,32 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="8cbf375961fb4eeda30b6b8f32af0471"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="9a5279d734d843eea886273680ffa37e"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="cfc37272b25348c9903cc9f241ac6236"
+				serviceId="nabu.providers.trace.persisted.services.local.stopTrace"
+				resultName="resulte01b9d704636488d9aa0a53af06b38f3"
+				temporaryMapping="true"
+				x="30"
+				y="30"
+				invocationOrder="0"
+				target="$all"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f9b171345fbf49e682beb0075415a472"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/serviceId</from>
+				<to>serviceId</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

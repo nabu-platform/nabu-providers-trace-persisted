@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<crud>
+    <allowHeaderAsQueryParameter>true</allowHeaderAsQueryParameter>
+    <broadcastCreate>true</broadcastCreate>
+    <broadcastUpdate>true</broadcastUpdate>
+    <coreType>nabu.providers.trace.persisted.database.types.traceInstanceMessage</coreType>
+    <createPermission>trace.manage</createPermission>
+    <createRole>$user</createRole>
+    <deletePermission>trace.manage</deletePermission>
+    <deleteRole>$user</deleteRole>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>traceInstanceId</key>
+        <operator>=</operator>
+        <or>false</or>
+        <input>true</input>
+        <vary>false</vary>
+    </filters>
+    <getPermission>trace.list</getPermission>
+    <listPermission>trace.list</listPermission>
+    <listRole>$user</listRole>
+    <provider>nabu.services.crud.provider.basic.provider</provider>
+    <restLimitToUser>true</restLimitToUser>
+    <updatePermission>trace.manage</updatePermission>
+    <updateRole>$user</updateRole>
+    <useExplicitLanguage>false</useExplicitLanguage>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
+    <useLanguage>false</useLanguage>
+    <useListOutputForCreate>false</useListOutputForCreate>
+    <useListOutputForUpdate>false</useListOutputForUpdate>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+</crud>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2022-12-15T09:26:33.736+01:00" lastModified="2022-12-15T18:35:28.189+01:00" leaf="true" version="23">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.providers.trace.persisted.database.types.traceInstance</references>
+    <references>nabu.providers.trace.persisted.database.types.traceInstanceMessage</references>
+    <references>nabu.providers.trace.persisted.database.types.traceService</references>
+</node>

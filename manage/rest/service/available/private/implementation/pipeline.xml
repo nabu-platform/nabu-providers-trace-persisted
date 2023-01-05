@@ -1,0 +1,6 @@
+<structure interface="nabu.providers.trace.persisted.manage.rest.service.available:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.utils.types.NodeDescription" maxOccurs="unbounded" minOccurs="0" name="available"/>
+    <field name="limit" type="java.lang.Long"/>
+</structure>

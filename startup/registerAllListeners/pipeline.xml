@@ -1,0 +1,6 @@
+<structure name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="traceConfigurations" definition="nabu.providers.trace.persisted.crud.traceService.types.output" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <field minOccurs="0" name="connectionId" type="java.lang.String"/>
+</structure>

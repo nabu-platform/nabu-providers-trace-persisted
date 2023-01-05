@@ -1,0 +1,6 @@
+<structure name="pipeline">
+    <structure name="input"/>
+    <structure name="output">
+        <structure definition="be.nabu.eai.module.tracer.TraceProfile" maxOccurs="unbounded" minOccurs="0" name="traceProfiles"/>
+    </structure>
+</structure>

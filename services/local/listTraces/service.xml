@@ -1,0 +1,40 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="986aede563024696986ba695b642c0fa"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="76db82c335de44309b03984cf2df0510"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="87523e53736b4a2c8300e6b9256d1f33"
+				serviceId="nabu.misc.tracer.Services.listTraces"
+				resultName="resultb4279795d4234a0a9e5ad1b76f3c4955"
+				temporaryMapping="true"
+				x="55"
+				y="41"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="467e9fb391394c7a9716e5281b342acb"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>nabu.providers.trace.persisted.traceListener</from>
+				<to>serviceToCall</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="a749a9d02e7a4076821d7d1d12075135"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultb4279795d4234a0a9e5ad1b76f3c4955/traceProfiles</from>
+			<to>output/traceProfiles</to>
+		</steps>
+	</steps>
+</sequence>

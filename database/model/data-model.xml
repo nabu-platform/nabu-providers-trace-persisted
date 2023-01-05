@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.providers.trace.persisted.database.types.traceInstance</type>
+        <x>687</x>
+        <y>238</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>1095</x>
+        <y>368</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>82</x>
+        <y>381</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.providers.trace.persisted.database.types.traceInstanceMessage</type>
+        <x>1245</x>
+        <y>350</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.providers.trace.persisted.database.types.traceService</type>
+        <x>138</x>
+        <y>387</y>
+    </entries>
+</dataModel>

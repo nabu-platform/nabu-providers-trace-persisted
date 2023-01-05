@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-15T09:27:44.782+01:00" lastModified="2022-12-15T19:00:22.433+01:00" leaf="true" version="8">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>java.util.UUID</references>
+    <references>nabu.providers.trace.persisted.database.types.traceService</references>
+    <references>java.util.Date</references>
+    <references>java.lang.String</references>
+</node>

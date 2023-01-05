@@ -1,0 +1,7 @@
+<structure interface="be.nabu.eai.module.tracer.api.TraceListener.handle" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="traceInstanceSteps" definition="nabu.providers.trace.persisted.database.types.traceInstanceMessage" name="step"/>
+    <structure collectionName="traceInstanceMessages" definition="nabu.providers.trace.persisted.database.types.traceInstanceMessage" maxOccurs="unbounded" minOccurs="0" name="messagesToCreate"/>
+    <structure collectionName="traceServices" definition="nabu.providers.trace.persisted.crud.traceService.types.output" name="existing"/>
+</structure>

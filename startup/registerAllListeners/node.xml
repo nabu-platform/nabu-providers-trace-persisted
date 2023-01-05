@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-12-15T11:27:09.141+01:00" lastModified="2022-12-15T18:30:40.638+01:00" leaf="true" version="15">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.providers.trace.persisted.crud.traceService.services.list</references>
+    <references>nabu.providers.trace.persisted.services.local.startTrace</references>
+    <references>nabu.providers.trace.persisted.crud.traceService.types.output</references>
+    <references>java.lang.String</references>
+    <references>nabu.protocols.jdbc.pool.Services.connectionForContext</references>
+    <references>nabu.utils.Runtime.getServiceContext</references>
+</node>

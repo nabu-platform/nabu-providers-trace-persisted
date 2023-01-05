@@ -1,0 +1,4 @@
+<structure name="serviceResultList">
+    <structure definition="nabu.providers.trace.persisted.manage.rest.service.serviceResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure definition="nabu.services.jdbc.types.Page" minOccurs="0" name="page"/>
+</structure>

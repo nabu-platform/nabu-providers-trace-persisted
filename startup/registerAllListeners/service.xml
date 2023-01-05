@@ -1,0 +1,131 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="1679fef018804550b2246e7f39b06f83"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="62d6eb2c4813421c861f916f04f75b09"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="c81e7308065048af8d11789474f37553"
+				serviceId="nabu.protocols.jdbc.pool.Services.connectionForContext"
+				resultName="result002e3f9ea58c4effac3e068369e4a1bc"
+				temporaryMapping="true"
+				x="456"
+				y="246"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="2ad12887d8e54f6e80f1880aa0b21ba2"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result78a6b7f28b16466ca58078778dd2cb24/serviceContext</from>
+				<to>context</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="752904e9efb846fa9f40bdb30ed3e971"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result002e3f9ea58c4effac3e068369e4a1bc/connectionId</from>
+			<to>connectionId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="744e53ea3e514b15b7d2330d8ffe3119"
+				serviceId="nabu.utils.Runtime.getServiceContext"
+				resultName="result78a6b7f28b16466ca58078778dd2cb24"
+				temporaryMapping="true"
+				x="0"
+				y="0"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Only select the configurations if we have a configured connection"
+			disabled="false"
+			id="6886315f934a43a6b044481c51062596"
+			label="connectionId != null"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="633d75e3fbbb45b29aabfd70563d71db"
+				serviceId="nabu.providers.trace.persisted.crud.traceService.services.list"
+				resultName="result326ad017e90d42fc9517393096eef0e3"
+				temporaryMapping="true"
+				x="410"
+				y="125"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="491bdd5d42924e4e93cf0003693940d7"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>connectionId</from>
+				<to>connectionId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="a99d4c0b26634413ac896c42ff63d771"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>true</from>
+				<to>filter/enabled</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="124687eaddf6466c965cb9c6648b0814"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result326ad017e90d42fc9517393096eef0e3/results</from>
+			<to>results</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="24cc9a323e4a4b338efcd8f715af5551"
+			lineNumber="4"
+			variable="result">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="c64b07a92ca54c3aacb08b95f0094ff0"
+				lineNumber="5">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="89caf55c7a64465fa344073f54690356"
+					serviceId="nabu.providers.trace.persisted.services.local.startTrace"
+					resultName="resultd5cac8aa004c468b8af914c192126037"
+					temporaryMapping="true"
+					x="215"
+					y="45"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="9279bba45f104defb13b520d69976ae7"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result/serviceId</from>
+					<to>serviceId</to>
+				</steps>
+			</steps>
+		</steps>
+		<query>results</query>
+	</steps>
+</sequence>

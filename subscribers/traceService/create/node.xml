@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-12-15T18:19:49.413+01:00" lastModified="2022-12-15T18:21:00.987+01:00" leaf="true" version="4">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.providers.trace.persisted.crud.traceService.types.createOutput</references>
+    <references>nabu.providers.trace.persisted.crud.traceService.hooks.create</references>
+    <references>nabu.providers.trace.persisted.subscribers.traceService.update</references>
+</node>

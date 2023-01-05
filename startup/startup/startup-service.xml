@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<startupService>
+    <service>nabu.providers.trace.persisted.startup.registerAllListeners</service>
+    <asynchronous>false</asynchronous>
+    <runPostDeployment>false</runPostDeployment>
+    <properties/>
+    <runPreDeployment>false</runPreDeployment>
+    <runDuringDeployment>false</runDuringDeployment>
+    <runAtStartup>false</runAtStartup>
+    <runAfterStartup>true</runAfterStartup>
+</startupService>

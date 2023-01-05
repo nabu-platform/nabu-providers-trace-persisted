@@ -1,0 +1,40 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="23dc92ea090749e6a3ba4f5f3a63e3c9"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="089eece013654693aa853ae7e5ad30b4"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="8eaf969cea8f4ec6be3ba6f2f863ed5b"
+				serviceId="nabu.misc.tracer.Services.stopTrace"
+				resultName="resultd3df5f906a0d435b8e7dbc5cb7f06996"
+				temporaryMapping="true"
+				x="69"
+				y="41"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="99cb0dea259547eaa91ad107799040da"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/serviceId</from>
+				<to>serviceToTrace</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="bd9abbf0ff754a098361b49967c018da"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>nabu.providers.trace.persisted.traceListener</from>
+				<to>serviceToCall</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

@@ -1,0 +1,4 @@
+<structure interface="nabu.providers.trace.persisted.crud.traceService.hooks.update" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+</structure>

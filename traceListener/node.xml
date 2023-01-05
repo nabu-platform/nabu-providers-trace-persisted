@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-12-14T17:16:09.305+01:00" lastModified="2022-12-16T14:08:07.636+01:00" leaf="true" version="29">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.providers.trace.persisted.crud.traceService.services.list</references>
+    <references>nabu.providers.trace.persisted.services.local.stopTraceInstance</references>
+    <references>nabu.services.jdbc.Services.insert</references>
+    <references>nabu.utils.Server.uuid</references>
+    <references>nabu.utils.Object.first</references>
+    <references>be.nabu.eai.module.tracer.api.TraceListener.handle</references>
+    <references>be.nabu.eai.module.tracer.TraceMessage</references>
+    <references>nabu.providers.trace.persisted.crud.traceService.services.create</references>
+    <references>java.lang.Boolean</references>
+    <references>nabu.providers.trace.persisted.database.types.traceInstanceMessage</references>
+    <references>nabu.providers.trace.persisted.crud.traceService.types.output</references>
+    <references>nabu.providers.trace.persisted.crud.traceInstance.services.create</references>
+</node>

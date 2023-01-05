@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-15T13:22:49.831+01:00" lastModified="2022-12-15T13:23:08.689+01:00" leaf="true" version="4">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.providers.trace.persisted.manage.rest.service.serviceResult</references>
+    <references>nabu.services.jdbc.types.Page</references>
+</node>
