@@ -43,15 +43,6 @@
 				invocationOrder="0"
 				asynchronous="false"
 				recache="false">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="2236ba7db64a484e87125a5d5c41c69a"
-					mask="false"
-					optional="false"
-					fixedValue="false">
-				<from>input/path/serviceId</from>
-				<to>filter/serviceToTrace[0]</to>
-			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
@@ -63,30 +54,51 @@
 			<to>existing</to>
 		</steps>
 	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="057f3211490f40c58f26962d6e39af28"
+			lineNumber="4"
+			variable="existingToUpdate">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="fb1a769b115744549f248729ec141841"
+				lineNumber="5">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="fdc7dd0f32d34c34a678c95a7126afef"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>false</from>
+				<to>existingToUpdate/enabled</to>
+			</steps>
+		</steps>
+		<query>existing</query>
+	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="f180cf16936d4c7ab6eea0c79fe0e27a"
 			label="existing"
-			lineNumber="4">
+			lineNumber="6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
-				id="9adbd080079144e4a641e08ffb28c977"
-				serviceId="nabu.providers.trace.persisted.crud.traceService.batch.deleteAll"
-				resultName="result13a1bc53f7d54fd9acfccd4d24ce5d9d"
+				id="c17c75fd81a348ca9ca6a66ed0778665"
+				serviceId="nabu.providers.trace.persisted.crud.traceService.batch.updateAll"
+				resultName="result8c191cab96a74f99a443937d97ae035c"
 				temporaryMapping="true"
-				x="198"
-				y="67"
+				x="226"
+				y="100"
 				invocationOrder="0"
 				asynchronous="false"
 				recache="false">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
-					id="e5ceba8f450b4587a1c9d2ded6dc2e7e"
-					mask="false"
+					id="3d540a89075b4be3aff0d624f9d65e4e"
+					mask="true"
 					optional="false"
 					fixedValue="false">
-				<from>existing/id</from>
-				<to>id</to>
+				<from>existing</from>
+				<to>instance</to>
 			</steps>
 		</steps>
 	</steps>

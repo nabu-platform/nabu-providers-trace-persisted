@@ -1,0 +1,3 @@
+<structure name="query">
+    <field minOccurs="0" name="enabled" type="java.lang.Boolean"/>
+</structure>

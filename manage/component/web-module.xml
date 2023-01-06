@@ -2,10 +2,9 @@
 <webModule>
     <webFragments>nabu.providers.trace.persisted.manage.rest.traceInstance.message.list</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceInstance.services.list</webFragments>
-    <webFragments>nabu.providers.trace.persisted.manage.rest.trace.start</webFragments>
-    <webFragments>nabu.providers.trace.persisted.manage.rest.trace.stop</webFragments>
     <webFragments>nabu.providers.trace.persisted.manage.rest.service.available</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceService.services.list</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceService.services.create</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceService.services.update</webFragments>
+    <webFragments>nabu.providers.trace.persisted.manage.rest.trace.toggle</webFragments>
 </webModule>

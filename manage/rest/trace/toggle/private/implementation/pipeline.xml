@@ -1,0 +1,5 @@
+<structure interface="nabu.providers.trace.persisted.manage.rest.trace.toggle:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="traceConfigurations" definition="nabu.providers.trace.persisted.crud.traceService.types.output" minOccurs="0" name="existing"/>
+</structure>

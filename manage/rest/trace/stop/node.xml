@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2022-12-15T12:25:09.935+01:00" lastModified="2022-12-15T14:33:35.706+01:00" leaf="true" version="9">
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2022-12-15T12:25:09.935+01:00" lastModified="2023-01-06T12:12:14.248+01:00" leaf="true" version="10">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
     <references>nabu.providers.trace.persisted.crud.traceService.services.list</references>
+    <references>nabu.providers.trace.persisted.crud.traceService.batch.updateAll</references>
     <references>nabu.providers.trace.persisted.services.cluster.stopTrace</references>
-    <references>nabu.providers.trace.persisted.crud.traceService.batch.deleteAll</references>
     <references>nabu.providers.trace.persisted.crud.traceService.types.output</references>
 </node>
