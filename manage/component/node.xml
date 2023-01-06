@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2022-12-15T11:33:49.946+01:00" lastModified="2022-12-15T18:44:48.678+01:00" leaf="true" version="9">
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2022-12-15T11:33:49.946+01:00" lastModified="2023-01-06T11:03:37.654+01:00" leaf="true" version="11">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
-    <references>nabu.providers.trace.persisted.crud.traceInstanceStep.services.list</references>
+    <references>nabu.providers.trace.persisted.manage.rest.traceInstance.message.list</references>
     <references>nabu.providers.trace.persisted.crud.traceInstance.services.list</references>
     <references>nabu.providers.trace.persisted.manage.rest.trace.start</references>
     <references>nabu.providers.trace.persisted.manage.rest.trace.stop</references>

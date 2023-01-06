@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <webModule>
-    <webFragments>nabu.providers.trace.persisted.crud.traceInstanceStep.services.list</webFragments>
+    <webFragments>nabu.providers.trace.persisted.manage.rest.traceInstance.message.list</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceInstance.services.list</webFragments>
     <webFragments>nabu.providers.trace.persisted.manage.rest.trace.start</webFragments>
     <webFragments>nabu.providers.trace.persisted.manage.rest.trace.stop</webFragments>

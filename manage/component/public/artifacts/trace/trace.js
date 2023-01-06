@@ -26,8 +26,9 @@ Vue.view("data-trace-viewer", {
 	description: "Visualize trace mode",
 	icon: "link",
 	created: function() {
-		this.watchArray();
+		//this.watchArray();
 		this.loadData();
+		this.watchAll();
 	},
 	data: function() {
 		return {
@@ -36,12 +37,27 @@ Vue.view("data-trace-viewer", {
 			showInvokeMapping: false,
 			selected: null,
 			search: null,
-			data: null
+			data: null,
+			subscriptions: []
 		}
 	},
+	beforeDestroy: function() {
+		this.unsubscribe();
+	},
 	methods: {
+		setData: function(value) {
+			if (value != null) {
+				try {
+					value = JSON.parse(value);
+				}
+				catch (exception) {
+					// ignore
+				}
+			}
+			Vue.set(this, 'data', value);
+		},
 		getEvents: function() {
-			var message = this.$services.swagger.resolve("nabu.providers.trace.persisted.crud.traceInstanceStep.types.output");
+			var message = this.$services.swagger.resolve("nabu.providers.trace.persisted.crud.traceInstanceMessage.types.output");
 			return {
 				showInput: message,
 				showOutput: message
@@ -50,16 +66,20 @@ Vue.view("data-trace-viewer", {
 		configurator: function() {
 			return "data-trace-viewer-configure"
 		},
-		watchArray: function() {
-			if (this.cell.state.array) {
-				var self = this;
-				this.$services.data.watchArray({
-					instance: this,
-					handler: function() {
-						self.loadData();
-					}
-				});
-			}
+		unsubscribe: function() {
+			this.$services.data.unwatchAll(this.subscriptions);
+		},
+		watchAll: function() {
+			this.unsubscribe();
+			var self = this;
+			nabu.utils.arrays.merge(this.subscriptions, this.$services.data.watchAll({
+				instance: this,
+				target: this.cell.state,
+				handler: function() {
+					self.loadData();
+					self.watchAll();
+				}
+			}));
 		},
 		loadData: function() {
 			var self = this;
@@ -222,7 +242,6 @@ Vue.component("data-trace-viewer-step", {
 		}
 	},
 	created: function() {
-		console.log("created with search", this.search);
 		// if we are created with a search parameter, match immediately
 		if (this.search) {
 			this.open = this.containsMatch(this.search);
@@ -244,6 +263,9 @@ Vue.component("data-trace-viewer-step", {
 			});
 		},
 		renderDetails: function() {
+			if (!this.message) {
+				return false;
+			}
 			// a report aimed at business
 			if (this.message.traceType == "REPORT" && this.message.audience == 'business') {
 				return false;

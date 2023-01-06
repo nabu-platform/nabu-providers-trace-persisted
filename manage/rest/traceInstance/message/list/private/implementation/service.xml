@@ -1,0 +1,76 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="0e872322ccb8439c9c83e031fc274e78"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="7323a82cf13f43c5ba15de8b2ec8d9bd"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="e87ada88e74c4c7195a8d0edbab30eba"
+				serviceId="nabu.providers.trace.persisted.crud.traceInstanceMessage.services.list"
+				resultName="result2d218dd2579048c0944980402d4fa998"
+				temporaryMapping="true"
+				x="236"
+				y="87"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="82a3980f8e1b42e4996011f684b8958e"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/traceInstanceId</from>
+				<to>filter/traceInstanceId[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d65c6769f6274cccaa943092ce3b602d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/limit</from>
+				<to>limit</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="307de1c575e247ce9fb65f1d275357fb"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/offset</from>
+				<to>offset</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="ebc30cc6d086488391194e4803b4c5c8"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/orderBy</from>
+				<to>orderBy</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="bf84e1749c2743f290e907485cc70f66"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>NONE</from>
+				<to>totalCount</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="a4bebd8af30449d187df7b58ef1e9245"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result2d218dd2579048c0944980402d4fa998</from>
+			<to>output/content</to>
+		</steps>
+	</steps>
+</sequence>

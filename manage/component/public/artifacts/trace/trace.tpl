@@ -19,8 +19,9 @@
 					<li class="is-column" v-if="message.input"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(message.input)">Input</button></li>
 					<li class="is-column" v-if="message.output"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(message.output)">Output</button></li>
 					<li class="is-column" v-if="description && !descriptionString"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(description.report)">Description</button></li>
+					<li class="is-column" v-if="message.error"><button class="is-button is-size-xsmall is-variant-danger-outline" type="button" @click="showData(message.error)">Error</button></li>
 				</ul>
-				<span v-if="message.traceType == 'SERVICE' && message.comment" class="is-tag is-size-xsmall">{{message.comment}}</span>
+				<span v-if="false && message.traceType == 'SERVICE' && message.comment" class="is-tag is-size-xsmall">{{message.comment}}</span>
 				<span v-if="descriptionString" class="is-tag is-size-xsmall is-variant-primary-dark-outline">{{descriptionString}}</span>
 			</div>
 		</div>
@@ -50,7 +51,7 @@
 				:value="single"/>
 		</template>
 		<template v-else>
-			<div class="data-trace-data-record">
+			<div class="data-trace-data-record" :class="{'data-trace-data-record-complex': $services.page.isObject(value)}">
 				<div class="data-trace-data-key">
 					<img class="key-icon" :src="keyIcon"/>
 					<span class="key-name is-content is-size-xsmall">{{name}}</span>
@@ -77,7 +78,7 @@
 					v-for="step in steps" 
 					:steps="step.steps" 
 					:message="step.message" 
-					@showData="function(value) { $window.Vue.set($self, 'data', value ? $window.JSON.parse(value) : null); $window.console.log('showing', data); }"
+					@showData="setData"
 					@select="function(value) { selected = value }"
 					v-bubble:showInput 
 					v-bubble:showOutput 
@@ -91,12 +92,15 @@
 				<n-form-checkbox v-model="showInvokeMapping" label="Show invoke mappings"/>
 			</div>
 		</div>
-		<div class="trace-data" v-if="data">
-			<data-trace-data-step
-				v-for="(childValue, key) in data"
-				:name="key"
-				:value="childValue"/>
-		</div>
+		<template v-if="data">
+			<div class="trace-data" v-if="$services.page.isObject(data)">
+				<data-trace-data-step
+					v-for="(childValue, key) in data"
+					:name="key"
+					:value="childValue"/>
+			</div>
+			<pre class="trace-data" v-else>{{data}}</pre>
+		</template>
 	</div>
 </template>
 
