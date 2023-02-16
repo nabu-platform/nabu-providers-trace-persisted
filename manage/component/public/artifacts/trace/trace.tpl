@@ -7,6 +7,7 @@
 				<span class="is-tag is-size-xsmall" v-else-if="message.started">...ms</span>
 				<span class="timestamp is-size-xsmall" v-if="message.started && showTime">{{$services.formatter.date(message.started, 'HH:mm:ss')}}</span>
 				<img class="step-icon" :src="stepIcon"/>
+				<span class="is-tag is-size-xsmall is-color-warning-outline" v-if="message.condition">{{message.condition}}</span>
 				<span class="step-label is-content is-size-xsmall type">{{stepLabel}}</span>
 				<span class="is-tag is-size-xsmall" v-if="message.fromValue" :class="{'is-variant-secondary-outline': message.fixed, 'is-variant-primary-dark-outline': !message.fixed}">{{cleanupFrom(message.fromValue)}}</span>
 				<icon class="is-size-xsmall" v-if="message.fromValue && message.toValue" name="arrow-right"/>
@@ -19,6 +20,9 @@
 					<li class="is-column" v-if="message.input"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(message.input)">Input</button></li>
 					<li class="is-column" v-if="message.output"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(message.output)">Output</button></li>
 					<li class="is-column" v-if="description && !descriptionString"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(description.report)">Description</button></li>
+					<template v-if="reports.length">
+						<li class="is-column" v-for="report in reports"><button class="is-button is-size-xsmall is-variant-warning-outline" type="button" @click="showData(report.report)">Report</button></li>
+					</template>
 					<li class="is-column" v-if="message.error"><button class="is-button is-size-xsmall is-variant-danger-outline" type="button" @click="showData(message.error)">Error</button></li>
 				</ul>
 				<span v-if="false && message.traceType == 'SERVICE' && message.comment" class="is-tag is-size-xsmall">{{message.comment}}</span>
@@ -63,7 +67,7 @@
 						:name="key"
 						:value="childValue"/>
 				</div>
-				<div class="data-trace-data-value is-content is-size-xsmall" v-else>{{value}}</div>
+				<pre class="data-trace-data-value is-content is-size-xsmall" v-else>{{value}}</pre>
 			</div>
 		</template>
 	</div>
@@ -101,6 +105,7 @@
 			</div>
 			<pre class="trace-data" v-else>{{data}}</pre>
 		</template>
+		<div v-else class="trace-data">No data selected</div>
 	</div>
 </template>
 

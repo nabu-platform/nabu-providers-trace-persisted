@@ -43,6 +43,15 @@
 				invocationOrder="0"
 				asynchronous="false"
 				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="50626bcbc3ed483c99cc03cffad70dbb"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/serviceId</from>
+				<to>filter/serviceId[0]</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"

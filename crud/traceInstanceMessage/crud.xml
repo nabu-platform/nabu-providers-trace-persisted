@@ -26,7 +26,6 @@
     <listBlacklistFields>alias</listBlacklistFields>
     <listBlacklistFields>realm</listBlacklistFields>
     <listBlacklistFields>impersonator</listBlacklistFields>
-    <listBlacklistFields>stepId</listBlacklistFields>
     <listPermission>trace.list</listPermission>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>

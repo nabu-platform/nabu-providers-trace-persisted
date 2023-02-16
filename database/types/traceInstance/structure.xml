@@ -11,4 +11,6 @@
     <field minOccurs="0" name="impersonatorId" type="java.lang.String"/>
     <field minOccurs="0" name="realm" type="java.lang.String"/>
     <field minOccurs="0" name="error" type="java.lang.String"/>
+    <field minOccurs="0" name="serverName" type="java.lang.String"/>
+    <field minOccurs="0" name="serverGroup" type="java.lang.String"/>
 </structure>

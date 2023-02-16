@@ -109,9 +109,9 @@
 							serviceId="nabu.providers.trace.persisted.crud.traceInstance.services.create"
 							resultName="result28d3d5796bdc4ab2b2480317bb70c96c"
 							temporaryMapping="true"
-							x="162"
-							y="45"
-							invocationOrder="0"
+							x="575"
+							y="57"
+							invocationOrder="1"
 							asynchronous="false"
 							recache="false">
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
@@ -204,6 +204,48 @@
 							<from>message/realm</from>
 							<to>instance/realm</to>
 						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="68df6d809f044eb98cde6e819c55bcb1"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>result606625cbc50841849e8de7a3adb365f3/group</from>
+							<to>instance/serverGroup</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="71f5e9c771eb4e06a7f64c67f260613f"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>resultd153c5e658c1467daf6570c80163777f/server</from>
+							<to>instance/serverName</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="021f78a298fd4ed5a1f8a38ab00b151e"
+							serviceId="nabu.utils.Server.getServerGroup"
+							resultName="result606625cbc50841849e8de7a3adb365f3"
+							temporaryMapping="true"
+							x="48"
+							y="404"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="c9f72a11bb2a475b8dc4eba1b7f9481a"
+							serviceId="nabu.utils.Server.getServerName"
+							resultName="resultd153c5e658c1467daf6570c80163777f"
+							temporaryMapping="true"
+							x="32"
+							y="317"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
 					</steps>
 				</steps>
 			</steps>

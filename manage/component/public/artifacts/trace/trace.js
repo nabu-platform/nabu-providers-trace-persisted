@@ -76,6 +76,7 @@ Vue.view("data-trace-viewer", {
 				instance: this,
 				target: this.cell.state,
 				handler: function() {
+					Vue.set(self, "data", null);
 					self.loadData();
 					self.watchAll();
 				}
@@ -257,7 +258,7 @@ Vue.component("data-trace-viewer-step", {
 	computed: {
 		filteredSteps: function() {
 			var self = this;
-			// we filter out reports, if that is your only claim to fame we don't want to show it as openable
+			// we filter out business reports, they are merged visually into the step
 			return this.steps.filter(function(x) {
 				return x.message.traceType != "REPORT";
 			});
@@ -334,6 +335,13 @@ Vue.component("data-trace-viewer-step", {
 			})[0];
 			return message ? message.message : null;
 		},
+		reports: function() {
+			return this.steps.filter(function(x) {
+				return x.message.audience == 'technical' && x.message.traceType == "REPORT";
+			}).map(function(x) {
+				return x.message;
+			});
+		},
 		descriptionString: function() {
 			var description = this.description;
 			return description ? this.getReportString(description) : null;
@@ -386,7 +394,6 @@ Vue.component("data-trace-viewer-step", {
 			else {
 				search = search.toLowerCase();
 			}
-			console.log("searching", message.traceType, message.serviceId, search);
 			return message.comment && message.comment.toLowerCase().indexOf(search) >= 0
 				|| message.error && message.error.toLowerCase().indexOf(search) >= 0
 				|| (message.traceType == "SERVICE" && message.serviceId.toLowerCase().indexOf(search) >= 0)

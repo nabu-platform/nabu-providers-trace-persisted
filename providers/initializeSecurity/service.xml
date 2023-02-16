@@ -92,7 +92,7 @@
 					mask="false"
 					optional="false"
 					fixedValue="true">
-				<from>oauth2.list,oauth2.manage</from>
+				<from>trace.list,trace.manage</from>
 				<to>string</to>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
