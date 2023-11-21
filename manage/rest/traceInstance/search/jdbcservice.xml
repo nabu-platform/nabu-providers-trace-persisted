@@ -1,0 +1,12 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>select distinct
+	tim.trace_instance_id,
+	ti.started,
+	ti.stopped
+from ~trace_instance_messages tim
+	join ~trace_instances ti on tim.trace_instance_id = ti.id
+where tim.trace_type='REPORT' and tim.sub_type='be.nabu.eai.module.tracer.TraceReportString' and tim.audience='business' and lower(report) like '%' || lower(:q) || '%'
+	and (:after is null or ti.started &gt;= :after)
+	and (:before is null or ti.stopped &lt; :before)
+	and ti.trace_service_id = :traceServiceId</sql>
+</jdbcService>

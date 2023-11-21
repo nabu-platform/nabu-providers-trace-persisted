@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-10-27T13:44:15.551+02:00" lastModified="2023-10-27T14:05:57.812+02:00" leaf="true" version="14">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.providers.trace.persisted.manage.rest.traceInstance.search</references>
+    <references>nabu.providers.trace.persisted.crud.traceInstance.types.outputList</references>
+    <references>java.util.UUID</references>
+    <references>nabu.providers.trace.persisted.crud.traceInstance.services.list</references>
+</node>

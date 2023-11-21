@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <webModule>
     <webFragments>nabu.providers.trace.persisted.manage.rest.traceInstance.message.list</webFragments>
-    <webFragments>nabu.providers.trace.persisted.crud.traceInstance.services.list</webFragments>
+    <webFragments>nabu.providers.trace.persisted.manage.rest.traceInstance.list</webFragments>
     <webFragments>nabu.providers.trace.persisted.manage.rest.service.available</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceService.services.list</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceService.services.create</webFragments>
     <webFragments>nabu.providers.trace.persisted.crud.traceService.services.update</webFragments>
     <webFragments>nabu.providers.trace.persisted.manage.rest.trace.toggle</webFragments>
+    <audience>MANAGER</audience>
 </webModule>

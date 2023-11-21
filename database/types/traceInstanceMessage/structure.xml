@@ -1,11 +1,11 @@
 <structure collectionName="traceInstanceMessages" name="traceInstanceMessage">
     <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
-    <field foreignKey="nabu.providers.trace.persisted.database.types.traceInstance:id" name="traceInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.providers.trace.persisted.database.types.traceInstance:id" indexed="true" name="traceInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field comment="E.g. service, step, report,..." name="traceType" type="java.lang.String"/>
     <field comment="For a report this is the report type, for a step this might be the step type" minOccurs="0" name="subType" type="java.lang.String"/>
     <field minOccurs="0" name="comment" type="java.lang.String"/>
     <field minOccurs="0" name="error" type="java.lang.String"/>
-    <field minOccurs="0" name="started" timezone="UTC" type="java.util.Date"/>
+    <field indexed="true" minOccurs="0" name="started" timezone="UTC" type="java.util.Date"/>
     <field minOccurs="0" name="stopped" timezone="UTC" type="java.util.Date"/>
     <field comment="The service this is happening in" minOccurs="0" name="serviceId" type="java.lang.String"/>
     <field minOccurs="0" name="input" type="java.lang.String"/>
