@@ -15,16 +15,16 @@
 	.trace-steps {
 		display: flex;
 		flex-direction: column;
-		row-gap: $spacing-scale-large;
+		row-gap: $spacing-large;
 	}
 	.is-trace-menu {
 		display: flex;
 		flex-direction: column;
-		row-gap: $spacing-scale-small;
+		row-gap: $spacing-small;
 	}
 	.data-trace-viewer-step {
 		&.is-rendered {
-			margin-left: $spacing-scale-medium;
+			margin-left: $spacing-medium;
 		}
 		&.is-openable {
 			cursor: pointer;
@@ -33,14 +33,14 @@
 			color: $color-primary-darkest;
 		}
 		.step-content {
-			padding: $spacing-scale-xsmall;
+			padding: $spacing-xsmall;
 			display: flex;
 			align-items: center;
-			column-gap: $spacing-scale-medium;
+			column-gap: $spacing-medium;
 			.step-content-container {
 				display: flex;
 				align-items: center;
-				column-gap: $spacing-scale-medium;
+				column-gap: $spacing-medium;
 			}
 			&.is-match {
 				.step-label {
@@ -51,7 +51,7 @@
 			}
 		}
 		.step-label {
-			padding: $spacing-scale-xsmall;
+			padding: $spacing-xsmall;
 		}
 		.is-selected {
 			.step-label {
@@ -66,23 +66,23 @@
 		margin: 0;
 	}
 	.trace-data {
-		margin-left: $spacing-scale-large;
-		padding-left: $spacing-scale-large;
+		margin-left: $spacing-large;
+		padding-left: $spacing-large;
 		border-left: solid 1px $color-neutral-base;
 		display: flex;
 		flex-direction: column;
-		row-gap: $spacing-scale-xsmall;
+		row-gap: $spacing-xsmall;
 		.data-trace-data-record {
 			display: flex;
-			column-gap: $spacing-scale-large;
+			column-gap: $spacing-large;
 			&.data-trace-data-record-complex {
 				flex-direction: column;
-				row-gap: $spacing-scale-xsmall;
+				row-gap: $spacing-xsmall;
 				.data-trace-data-value {
-					margin-left: $spacing-scale-medium;
+					margin-left: $spacing-medium;
 					display: flex;
 					flex-direction: column;
-					row-gap: $spacing-scale-xsmall;
+					row-gap: $spacing-xsmall;
 				}
 			}
 			&:not(.data-trace-data-record-complex) {
@@ -101,7 +101,7 @@
 			}
 			.data-trace-data-key {
 				display: flex;
-				column-gap: $spacing-scale-medium;
+				column-gap: $spacing-medium;
 				align-items: center;
 			}
 		}
