@@ -2,7 +2,7 @@
 <restInterface>
     <method>GET</method>
     <path>/traceInstance</path>
-    <queryParameters>limit, offset, orderBy, q, traceServiceId, after, before</queryParameters>
+    <queryParameters>limit, offset, orderBy, q, traceServiceId, after, before, hasError</queryParameters>
     <role>$user</role>
     <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
     <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
@@ -33,4 +33,5 @@
     <captureSuccessful>false</captureSuccessful>
     <limitedToInterface>false</limitedToInterface>
     <allowExplicitResponseCode>false</allowExplicitResponseCode>
+    <stubbed>false</stubbed>
 </restInterface>

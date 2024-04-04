@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <crud>
     <allowHeaderAsQueryParameter>true</allowHeaderAsQueryParameter>
-    <broadcastCreate>true</broadcastCreate>
-    <broadcastUpdate>true</broadcastUpdate>
+    <broadcastCreate>false</broadcastCreate>
+    <broadcastUpdate>false</broadcastUpdate>
     <coreType>nabu.providers.trace.persisted.database.types.traceInstanceMessage</coreType>
     <createPermission>trace.manage</createPermission>
     <createRole>$user</createRole>

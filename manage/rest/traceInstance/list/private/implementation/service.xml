@@ -77,6 +77,15 @@
 					<from>input/query/before</from>
 					<to>filter/before</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="f02bc2d6f9e548b78b1b57135d68ac3e"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/query/hasError</from>
+					<to>filter/hasError</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
