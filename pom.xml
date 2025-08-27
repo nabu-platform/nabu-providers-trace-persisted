@@ -9,4 +9,50 @@
 		<artifactId>modules</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>nabu.services</groupId>
+			<artifactId>vm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.services</groupId>
+			<artifactId>jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.misc</groupId>
+			<artifactId>tracer</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web.rest</groupId>
+			<artifactId>provider</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.types</groupId>
+			<artifactId>structure</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu</groupId>
+			<artifactId>utils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web</groupId>
+			<artifactId>component</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.services</groupId>
+			<artifactId>crud</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.types</groupId>
+			<artifactId>model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.protocols.jdbc</groupId>
+			<artifactId>pool</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.misc</groupId>
+			<artifactId>startup</artifactId>
+		</dependency>
+	</dependencies>
 </project>
